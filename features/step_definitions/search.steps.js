@@ -1,16 +1,9 @@
 const puppeteer = require("puppeteer");
 const chai = require("chai");
 const expect = chai.expect;
-const {
-    Given,
-    When,
-    Then,
-    Before,
-    After
-} = require("cucumber");
-const {
-    clickElement
-} = require("../../lib/commands.js");
+const { Given, When, Then, Before, After } = require("cucumber");
+const { clickElement } = require("../../lib/commands.js");
+
 Before(async function() {
     const browser = await puppeteer.launch({
         headless: false,
